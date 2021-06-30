@@ -9,7 +9,10 @@ data.forEach(element => console.log(element));
 //append one table row `tr`for each weather report object
 
 data.forEach((element) => {
-    var row = tbody.append("tr")
+    var row = tbody.append("tr");
+    Object.entries(element).forEach(([key,value]) => {
+        row.append("td").text(value);
+    })
 })
 
 
